@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "student_mlops"
+version = "0.1.0"
+description = "MLOps project for student performance prediction"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "mlflow",
+    "fastapi",
+    "uvicorn",
+    "joblib",
+    "python-multipart",
+    "pydantic",
+    "pytest"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["student_mlops", "student_mlops.*"]
